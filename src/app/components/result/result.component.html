@@ -1,0 +1,18 @@
+<div class="mt-4 p-4 bg-light border-5">
+
+    <h3>Resultado</h3>
+
+    <div *ngIf="!result; else elseBlock" class="alert alert-primary" role="alert">
+        Debes ingresar un número para ver el resultado.
+    </div>
+
+    <ng-template #elseBlock>
+        <div class="card border-success mb-3">
+            <div class="card-header">El número ingresado es {{ result?.a }}</div>
+            <div class="card-body text-success">
+                <h5 class="card-title">El término n-ésimo es {{ '{' + result?.a }}n+{{ result?.b + '}' }} </h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </ng-template>
+</div>

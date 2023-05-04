@@ -1,0 +1,16 @@
+<form (ngSubmit)="checkNumber(number.value)">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Ingresa un número primo múltiplo de 3</label>
+      <input
+        type="number"
+        [formControl]="number"
+        class="form-control"
+        id="number"
+        aria-describedby="nthTerm">
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary">
+      Calcular
+    </button>
+</form>
